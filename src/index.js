@@ -18,7 +18,7 @@ let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt= ${prompt}&context=$
 
 let quoteElement = document.querySelector("#quote");
 quoteElement.classList.remove("hidden");
-quoteElement.innerHTML = `⌛ Generating a quote for you about ${instructionsInput.value}`;
+quoteElement.innerHTML = `<div class="blink">⌛ Generating a quote for you about ${instructionsInput.value}</div>`;
 
 axios.get(apiUrl).then(displayQuote);
 }
