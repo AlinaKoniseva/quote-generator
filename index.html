@@ -15,12 +15,15 @@
     </header>
 
     <main>
+        <div class="form-container">
         <form id="quote-generator-form">
-            <input type="text" placeholder="Enter the topic of the quote" autofocus required
+            <input type="text" placeholder="Enter a topic of the quote" autofocus required
             autocomplete="off" class="instructions" id="user-instructions"/>
             <input type="submit" class="submit-button"/>
         </form>
-        <div class="quote" id="quote"></div>
+        <div class="hint">i.e: Flower, Travel or Love</div>
+    </div>
+        <div class="quote hidden blink" id="quote"></div>
     </main>
 
 

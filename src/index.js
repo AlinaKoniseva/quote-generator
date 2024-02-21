@@ -16,6 +16,10 @@ let prompt = `Please generate a quote about ${instructionsInput.value} from Russ
 let context = "You are a wise AI generator who provides 2 options of answers: in Russian and English languages.Example: `Option 1: Quote in Russian <br /><br /> Option 2: Quote in English` Sign the quote with 'SheCodes AI' inside a <strong> element in the end of the quote divided by <br /><br /> only after the last answer.";
 let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt= ${prompt}&context=${context}&key=${apiKey}`;
 
+let quoteElement = document.querySelector("#quote");
+quoteElement.classList.remove("hidden");
+quoteElement.innerHTML = `⌛ Generating a quote for you about ${instructionsInput.value}`;
+
 axios.get(apiUrl).then(displayQuote);
 }
 
